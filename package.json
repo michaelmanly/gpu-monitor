@@ -1,6 +1,6 @@
 {
   "name": "gpu-monitor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI that flags idle GPUs and estimates wasted spend from local nvidia-smi data.",
   "repository": {
     "type": "git",
