@@ -4,11 +4,11 @@
   "description": "CLI that flags idle GPUs and estimates wasted spend from local nvidia-smi data.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelmanly/gpu-ai.git"
+    "url": "git+https://github.com/michaelmanly/gpu-monitor.git"
   },
-  "homepage": "https://github.com/michaelmanly/gpu-ai/tree/main/packages/gpu-monitor",
+  "homepage": "https://github.com/michaelmanly/gpu-monitor",
   "bugs": {
-    "url": "https://github.com/michaelmanly/gpu-ai/issues"
+    "url": "https://github.com/michaelmanly/gpu-monitor/issues"
   },
   "type": "module",
   "bin": {

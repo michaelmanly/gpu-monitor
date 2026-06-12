@@ -7,8 +7,6 @@ Watch your GPU boxes for idle spend. Local checks are free. Email alerts use Bad
 
 `gpu-monitor` is a CLI watcher that runs on the GPU machine — rented GPU pods, cloud GPU instances, local workstation, or any Linux box with NVIDIA drivers — and alerts when a GPU has been idle long enough to waste money.
 
-It is not a dashboard, MCP server, GitHub Action, or marketplace app.
-
 **This CLI is MIT-licensed open source.** You can read every line it runs before you put it on a machine with SSH access, API keys, or customer data.
 
 Hosted alerts, alert history, team features, and automated actions are commercial features provided by [Badgr](https://badgr.dev).
@@ -326,7 +324,7 @@ If all paths fail, the tool prints a clear message explaining which image type t
 
 ## Open Source
 
-`gpu-monitor` is MIT-licensed. Source is at [github.com/michaelmanly/gpu-ai](https://github.com/michaelmanly/gpu-ai/tree/main/packages/gpu-monitor).
+`gpu-monitor` is MIT-licensed. Source is at [github.com/michaelmanly/gpu-monitor](https://github.com/michaelmanly/gpu-monitor).
 
 **What is open source:**
 
@@ -345,19 +343,3 @@ If all paths fail, the tool prints a clear message explaining which image type t
 * Paid monitoring features
 
 Bugs and pull requests welcome on GitHub.
-
----
-
-## Smoke Test Checklist
-
-Before shipping, verify:
-
-1. **Idle GPU alert** — run `watch` on a machine with an idle GPU; confirm email arrives after `--idle-minutes`
-2. **Busy GPU no alert** — run `watch` on a machine under load; confirm no alert fires
-3. **Real Badgr email delivery** — use a real key and email; confirm message arrives in inbox
-4. **Cooldown** — after the first alert, confirm no second alert until `--email-cooldown-minutes` has elapsed
-5. **Invalid key** — pass a bad `--badgr-key`; confirm non-zero exit and error message with no key in output
-6. **SSH disconnect with nohup** — start with `nohup`, disconnect, reconnect, confirm log shows continued checks
-7. **Multi-GPU output** — run on a multi-GPU machine; confirm each GPU is reported separately
-8. **Stale memory** — run `check` on a machine with a process holding VRAM but not computing; confirm `⚠ stale memory` line appears
-9. **processes command** — run `gpu-monitor processes` on a machine with active GPU processes; confirm PIDs and memory usage are listed per GPU

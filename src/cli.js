@@ -420,7 +420,7 @@ export function formatTextReport(report) {
   if (report.emailConfigured) {
     lines.push('', 'Email alerts: enabled through Badgr');
   }
-  lines.push('', 'Watch your GPU boxes for idle spend. Local checks are free. Email alerts use Badgr.', '');
+  lines.push('');
   return lines.join('\n');
 }
 
